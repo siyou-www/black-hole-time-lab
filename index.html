@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Black Hole Time Lab</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/simulation.css">
+
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home">Black Hole Time Lab</a>
+
+            <div>
+                <a href="#simulation">Simulation</a>
+                <a href="#comparison">Comparison</a>
+                <a href="#physics">Physics</a>
+                <a href="#about">About</a>
+                <a href="#references">References</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <h1>How Do Black Holes Distort Spacetime?</h1>
+            <p>
+                Explore how gravity affects space, light,
+                and time through interactive simulations.
+            </p>
+            <a href="#simulation">Start Exploring</a>
+        </section>
+
+        <!-- Interactive Simulation -->
+        <section id="simulation">
+            <h2>Gravitational Time Dilation Simulator</h2>
+
+            <div class="simulation-container">
+                <div class="black-hole-visual">
+                    <h3>Black Hole Visualization</h3>
+
+                    <div id="black-hole-display">
+                        <svg
+                            id="black-hole-svg"
+                            viewBox="0 0 600 400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="img"
+                            aria-label="Black hole and observer position diagram"
+                        >
+                            <defs>
+                                <radialGradient id="space-glow">
+                                    <stop offset="0%" stop-color="#254b70"/>
+                                    <stop offset="55%" stop-color="#14283f"/>
+                                    <stop offset="100%" stop-color="#080d18"/>
+                                </radialGradient>
+
+                                <radialGradient id="event-glow">
+                                    <stop offset="60%" stop-color="#000000"/>
+                                    <stop offset="78%" stop-color="#f59e0b"/>
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#f59e0b"
+                                        stop-opacity="0"
+                                    />
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Space Background -->
+                            <rect
+                                width="600"
+                                height="400"
+                                fill="url(#space-glow)"
+                            />
+
+                            <!-- Black Hole Glow -->
+                            <circle
+                                cx="200"
+                                cy="200"
+                                r="125"
+                                fill="url(#event-glow)"
+                            />
+
+                            <!-- Event Horizon -->
+                            <circle
+                                cx="200"
+                                cy="200"
+                                r="75"
+                                fill="#000000"
+                                stroke="#fbbf24"
+                                stroke-width="2"
+                            />
+
+                            <!-- Distance Guide -->
+                            <line
+                                x1="275"
+                                y1="200"
+                                x2="550"
+                                y2="200"
+                                stroke="#64748b"
+                                stroke-width="2"
+                                stroke-dasharray="6 6"
+                            />
+
+                            <!-- Observer -->
+                            <g
+                                id="observer"
+                                transform="translate(350,200)"
+                            >
+                                <circle
+                                    r="12"
+                                    fill="#38bdf8"
+                                    stroke="#ffffff"
+                                    stroke-width="2"
+                                />
+
+                                <text
+                                    x="0"
+                                    y="-25"
+                                    fill="#ffffff"
+                                    text-anchor="middle"
+                                    font-size="16"
+                                >
+                                    Observer
+                                </text>
+                            </g>
+
+                            <!-- Labels -->
+                            <text
+                                x="200"
+                                y="320"
+                                fill="#fbbf24"
+                                text-anchor="middle"
+                                font-size="15"
+                            >
+                                Event Horizon
+                            </text>
+
+                            <text
+                                x="300"
+                                y="380"
+                                fill="#94a3b8"
+                                text-anchor="middle"
+                                font-size="13"
+                            >
+                                Schwarzschild Black Hole (Not to Scale)
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Simulation Controls -->
+                <div class="simulation-controls">
+                    <h3>Time Comparison</h3>
+
+                    <p>
+                        Near Black Hole:
+                        <span id="near-clock">00:00:00</span>
+                    </p>
+
+                    <p>
+                        Far Away:
+                        <span id="far-clock">00:00:00</span>
+                    </p>
+
+                    <label for="distance-slider">
+                        Distance from Black Hole
+                    </label>
+
+                    <input
+                        type="range"
+                        id="distance-slider"
+                        min="1.01"
+                        max="10"
+                        step="0.01"
+                        value="2"
+                    >
+
+                    <p>
+                        Distance:
+                        <span id="distance-value">2.00</span> Rs
+                    </p>
+                    
+<div class="time-dilation-info">
+    <div class="time-stat">
+        <span class="stat-label">Time Dilation Factor</span>
+        <strong id="dilation-factor">0.7071</strong>
+    </div>
+
+    <div class="time-stat">
+        <span class="stat-label">Near Clock Rate</span>
+        <strong id="clock-rate">70.71%</strong>
+    </div>
+</div>
+
+<p id="dilation-explanation">
+    The near clock runs at 70.71% of the far-away
+    clock's rate.
+</p>
+
+
+                    <button id="start-button">Start</button>
+                    <button id="reset-button">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Object Comparison -->
+        <section id="comparison">
+            <h2>Earth, Sun, and Black Hole</h2>
+            <div id="comparison-container"></div>
+        </section>
+
+        <!-- Physics -->
+        <section id="physics">
+            <h2>Physics Explained</h2>
+
+            <h3>Spacetime and Gravity</h3>
+            <p>How does mass affect spacetime?</p>
+
+            <h3>Gravitational Time Dilation</h3>
+            <p>Why does time pass differently near a black hole?</p>
+
+            <h3>Gravitational Lensing</h3>
+            <p>How does gravity bend the path of light?</p>
+        </section>
+
+        <!-- SIP Information -->
+        <section id="about">
+            <h2>About This Project</h2>
+
+            <h3>Project Introduction</h3>
+            <p>Project introduction coming soon.</p>
+
+            <h3>Personal Interest</h3>
+            <p>Personal interest coming soon.</p>
+
+            <h3>Course Connection</h3>
+            <p>Course connection coming soon.</p>
+        </section>
+
+        <!-- References -->
+        <section id="references">
+            <h2>References</h2>
+            <p>Scientific references coming soon.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Black Hole Time Lab | Astronomy SIP</p>
+    </footer>
+</body>
+</html>

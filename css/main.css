@@ -1,0 +1,198 @@
+
+/* ===== Global Variables ===== */
+
+:root {
+    --bg-primary: #080d18;
+    --bg-secondary: #111b2e;
+    --bg-card: #172238;
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #c5cedb;
+
+    --accent: #38bdf8;
+    --accent-hover: #7dd3fc;
+
+    --border-color: #293750;
+}
+
+/* ===== Reset ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 13, 24, 0.95);
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav div {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent-hover);
+}
+
+/* ===== Main Layout ===== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 90px 0;
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 75px;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    max-width: 850px;
+}
+
+h2 {
+    font-size: clamp(26px, 3vw, 36px);
+    margin-bottom: 28px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 28px;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* ===== Hero Section ===== */
+
+#home {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home p {
+    font-size: 19px;
+    max-width: 650px;
+}
+
+#home a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 24px;
+    padding: 13px 26px;
+
+    background: var(--accent);
+    color: #080d18;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: background 0.2s;
+}
+
+#home a:hover {
+    background: var(--accent-hover);
+}
+
+/* ===== Buttons ===== */
+
+button {
+    padding: 11px 22px;
+    margin: 12px 8px 0 0;
+
+    background: var(--accent);
+    color: #080d18;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+/* ===== Footer ===== */
+
+footer {
+    padding: 30px 24px;
+    text-align: center;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav div {
+        gap: 14px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    #home {
+        min-height: 60vh;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
