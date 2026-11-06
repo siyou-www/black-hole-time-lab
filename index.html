@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,108 +49,50 @@
                     <h3>Black Hole Visualization</h3>
 
                     <div id="black-hole-display">
-                        <svg
-                            id="black-hole-svg"
-                            viewBox="0 0 600 400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            role="img"
-                            aria-label="Black hole and observer position diagram"
-                        >
+                        <svg id="black-hole-svg" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Black hole and observer position diagram">
                             <defs>
                                 <radialGradient id="space-glow">
-                                    <stop offset="0%" stop-color="#254b70"/>
-                                    <stop offset="55%" stop-color="#14283f"/>
-                                    <stop offset="100%" stop-color="#080d18"/>
+                                    <stop offset="0%" stop-color="#254b70" />
+                                    <stop offset="55%" stop-color="#14283f" />
+                                    <stop offset="100%" stop-color="#080d18" />
                                 </radialGradient>
 
                                 <radialGradient id="event-glow">
-                                    <stop offset="60%" stop-color="#000000"/>
-                                    <stop offset="78%" stop-color="#f59e0b"/>
-                                    <stop
-                                        offset="100%"
-                                        stop-color="#f59e0b"
-                                        stop-opacity="0"
-                                    />
+                                    <stop offset="60%" stop-color="#000000" />
+                                    <stop offset="78%" stop-color="#f59e0b" />
+                                    <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
                                 </radialGradient>
                             </defs>
 
                             <!-- Space Background -->
-                            <rect
-                                width="600"
-                                height="400"
-                                fill="url(#space-glow)"
-                            />
+                            <rect width="600" height="400" fill="url(#space-glow)" />
 
                             <!-- Black Hole Glow -->
-                            <circle
-                                cx="200"
-                                cy="200"
-                                r="125"
-                                fill="url(#event-glow)"
-                            />
+                            <circle cx="200" cy="200" r="125" fill="url(#event-glow)" />
 
                             <!-- Event Horizon -->
-                            <circle
-                                cx="200"
-                                cy="200"
-                                r="75"
-                                fill="#000000"
-                                stroke="#fbbf24"
-                                stroke-width="2"
-                            />
+                            <circle cx="200" cy="200" r="75" fill="#000000" stroke="#fbbf24" stroke-width="2" />
 
                             <!-- Distance Guide -->
-                            <line
-                                x1="275"
-                                y1="200"
-                                x2="550"
-                                y2="200"
-                                stroke="#64748b"
-                                stroke-width="2"
-                                stroke-dasharray="6 6"
-                            />
+                            <line x1="275" y1="200" x2="550" y2="200" stroke="#64748b" stroke-width="2"
+                                stroke-dasharray="6 6" />
 
                             <!-- Observer -->
-                            <g
-                                id="observer"
-                                transform="translate(350,200)"
-                            >
-                                <circle
-                                    r="12"
-                                    fill="#38bdf8"
-                                    stroke="#ffffff"
-                                    stroke-width="2"
-                                />
+                            <g id="observer" transform="translate(350,200)">
+                                <circle r="12" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
 
-                                <text
-                                    x="0"
-                                    y="-25"
-                                    fill="#ffffff"
-                                    text-anchor="middle"
-                                    font-size="16"
-                                >
+                                <text x="0" y="-25" fill="#ffffff" text-anchor="middle" font-size="16">
                                     Observer
                                 </text>
                             </g>
 
                             <!-- Labels -->
-                            <text
-                                x="200"
-                                y="320"
-                                fill="#fbbf24"
-                                text-anchor="middle"
-                                font-size="15"
-                            >
+                            <text x="200" y="320" fill="#fbbf24" text-anchor="middle" font-size="15">
                                 Event Horizon
                             </text>
 
-                            <text
-                                x="300"
-                                y="380"
-                                fill="#94a3b8"
-                                text-anchor="middle"
-                                font-size="13"
-                            >
+                            <text x="300" y="380" fill="#94a3b8" text-anchor="middle" font-size="13">
                                 Schwarzschild Black Hole (Not to Scale)
                             </text>
                         </svg>
@@ -175,36 +117,29 @@
                         Distance from Black Hole
                     </label>
 
-                    <input
-                        type="range"
-                        id="distance-slider"
-                        min="1.01"
-                        max="10"
-                        step="0.01"
-                        value="2"
-                    >
+                    <input type="range" id="distance-slider" min="1.01" max="10" step="0.01" value="2">
 
                     <p>
                         Distance:
                         <span id="distance-value">2.00</span> Rs
                     </p>
-                    
-<div class="time-dilation-info">
-    <div class="time-stat">
-        <span class="stat-label">Time Dilation Factor</span>
-        <strong id="dilation-factor">0.7071</strong>
-    </div>
 
-    <div class="time-stat">
-        <span class="stat-label">Near Clock Rate</span>
-        <strong id="clock-rate">70.71%</strong>
-    </div>
-</div>
+                    <div class="time-dilation-info">
+                        <div class="time-stat">
+                            <span class="stat-label">Time Dilation Factor</span>
+                            <strong id="dilation-factor">0.7071</strong>
+                        </div>
 
-<p id="dilation-explanation">
-    The near clock runs at 70.71% of the far-away
-    clock's rate.
-</p>
+                        <div class="time-stat">
+                            <span class="stat-label">Near Clock Rate</span>
+                            <strong id="clock-rate">70.71%</strong>
+                        </div>
+                    </div>
+
+                    <p id="dilation-explanation">
+                        The near clock runs at 70.71% of the far-away
+                        clock's rate.
+                    </p>
 
 
                     <button id="start-button">Start</button>
@@ -217,6 +152,48 @@
         <section id="comparison">
             <h2>Earth, Sun, and Black Hole</h2>
             <div id="comparison-container"></div>
+
+            <div class="mass-comparison">
+                <h3>Does Black Hole Mass Affect Time Dilation?</h3>
+
+                <p>
+                    Compare black holes with different masses at the
+                    same distance measured in Schwarzschild radii.
+                </p>
+
+                <label for="mass-slider">
+                    Black Hole Mass:
+                    <strong>
+                        <span id="mass-value">10</span>
+                        Solar Masses
+                    </strong>
+                </label>
+
+                <input type="range" id="mass-slider" min="1" max="1000000" step="1" value="10">
+
+                <div class="mass-results">
+                    <div>
+                        <span>Schwarzschild Radius</span>
+                        <strong id="mass-radius">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Observer Distance (2 Rs)</span>
+                        <strong id="mass-distance">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Time Dilation Factor</span>
+                        <strong id="mass-factor">--</strong>
+                    </div>
+                </div>
+
+                <p class="mass-explanation">
+                    At 2 Schwarzschild radii, the time dilation factor
+                    stays the same regardless of black hole mass.
+                </p>
+            </div>
+
         </section>
 
         <!-- Physics -->
@@ -258,4 +235,5 @@
         <p>Black Hole Time Lab | Astronomy SIP</p>
     </footer>
 </body>
+
 </html>
