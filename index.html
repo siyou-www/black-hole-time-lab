@@ -197,18 +197,100 @@
         </section>
 
         <!-- Physics -->
+
         <section id="physics">
             <h2>Physics Explained</h2>
 
-            <h3>Spacetime and Gravity</h3>
-            <p>How does mass affect spacetime?</p>
+            <p>
+                Einstein's general relativity describes gravity as
+                the curvature of spacetime. Near a black hole,
+                gravitational time dilation becomes especially significant.
+            </p>
 
-            <h3>Gravitational Time Dilation</h3>
-            <p>Why does time pass differently near a black hole?</p>
+            <div class="physics-grid">
+                <article class="physics-card">
+                    <h3>1. Schwarzschild Radius</h3>
 
-            <h3>Gravitational Lensing</h3>
-            <p>How does gravity bend the path of light?</p>
+                    <div class="physics-equation">
+                        R<sub>s</sub> = 2GM / c<sup>2</sup>
+                    </div>
+
+                    <p>
+                        The Schwarzschild radius determines the
+                        event horizon of a non-rotating black hole.
+                        It increases proportionally with mass.
+                    </p>
+
+                    <p>
+                        G = Gravitational constant<br>
+                        M = Black hole mass<br>
+                        c = Speed of light
+                    </p>
+                </article>
+
+                <article class="physics-card">
+                    <h3>2. Gravitational Time Dilation</h3>
+
+                    <div class="physics-equation">
+                        Δτ / Δt = √(1 − R<sub>s</sub> / r)
+                    </div>
+
+                    <p>
+                        A stationary clock near a black hole
+                        runs slower relative to a clock far away.
+                    </p>
+
+                    <p>
+                        Δτ = Time measured near the black hole<br>
+                        Δt = Time measured far away<br>
+                        r = Radial coordinate from the black hole
+                    </p>
+                </article>
+
+                <article class="physics-card">
+                    <h3>3. Why Mass Cancels Out</h3>
+
+                    <div class="physics-equation">
+                        r = kR<sub>s</sub>
+                    </div>
+
+                    <div class="physics-equation">
+                        Δτ / Δt = √(1 − 1/k)
+                    </div>
+
+                    <p>
+                        When distance is measured as a multiple
+                        of Schwarzschild radii, the mass cancels out.
+                        At the same value of k, black holes of
+                        different masses produce the same time
+                        dilation factor.
+                    </p>
+                </article>
+            </div>
+
+            <div class="physics-limitations">
+                <h3>Model Assumptions and Limitations</h3>
+
+                <p>
+                    This simulator uses the Schwarzschild model,
+                    which describes a non-rotating, uncharged
+                    black hole.
+                </p>
+
+                <p>
+                    The equation compares stationary observers
+                    outside the event horizon with an observer
+                    very far from the black hole.
+                </p>
+
+                <p>
+                    It does not describe freely falling observers,
+                    orbiting spacecraft, or rotating black holes.
+                    The visualization is schematic and not to scale.
+                </p>
+            </div>
         </section>
+
 
         <!-- SIP Information -->
         <section id="about">

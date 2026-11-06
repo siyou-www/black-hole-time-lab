@@ -277,3 +277,58 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Physics Explained ===== */
+
+.physics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.physics-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.physics-card h3 {
+    margin-top: 0;
+}
+
+.physics-card p {
+    font-size: 14px;
+}
+
+.physics-equation {
+    margin: 22px 0;
+    padding: 20px 12px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    color: var(--accent);
+    font-size: clamp(17px, 2vw, 22px);
+    font-weight: 600;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.physics-limitations {
+    margin-top: 28px;
+    padding: 28px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.physics-limitations h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .physics-grid {
+        grid-template-columns: 1fr;
+    }
+}
