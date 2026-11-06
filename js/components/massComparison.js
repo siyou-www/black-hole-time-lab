@@ -15,7 +15,8 @@ export function initializeMassComparison() {
     const DISTANCE_IN_RS = 2;
 
     function updateMassComparison() {
-        const solarMasses = Number(massSlider.value);
+        const exponent = Number(massSlider.value);
+        const solarMasses = Math.pow(10, exponent);
         const massKg = solarMasses * SOLAR_MASS;
 
         const rsMeters = calculateSchwarzschildRadius(massKg);
@@ -23,7 +24,9 @@ export function initializeMassComparison() {
 
         const factor = calculateTimeDilation(DISTANCE_IN_RS);
 
-        massValue.textContent = solarMasses.toLocaleString("en-US");
+        massValue.textContent = solarMasses.toLocaleString("en-US", {
+            maximumFractionDigits: 2
+        });
 
         radiusValue.textContent =
             `${(rsMeters / 1000).toLocaleString("en-US", {
