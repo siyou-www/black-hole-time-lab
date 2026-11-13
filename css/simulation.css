@@ -369,3 +369,90 @@
     color: var(--accent-hover);
     text-decoration: underline;
 }
+
+/* ===== About This Project ===== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.about-card {
+    padding: 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    min-width: 0;
+}
+
+.about-card h3 {
+    margin-top: 0;
+}
+
+.about-card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.project-goal {
+    margin-top: 28px;
+    padding: 28px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.project-goal h3:first-child {
+    margin-top: 0;
+}
+
+.project-goal p {
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== How to Use This Lab ===== */
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.guide-card {
+    position: relative;
+    padding: 28px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.guide-number {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.guide-card h3 {
+    margin-top: 0;
+}
+
+.guide-card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+}
