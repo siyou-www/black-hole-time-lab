@@ -488,3 +488,30 @@
     .star-field circle,
     .observer-pulse { animation: none; }
 }
+
+/* ===== Step 20: Quick Distance Presets ===== */
+.distance-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 4px;
+}
+.distance-presets .distance-preset {
+    margin: 0;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+.distance-presets .distance-preset:hover,
+.distance-presets .distance-preset:focus-visible {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+.distance-presets .distance-preset[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: rgba(56, 189, 248, 0.14);
+    color: var(--accent);
+}
