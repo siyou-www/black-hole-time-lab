@@ -4,6 +4,7 @@ import { calculateTimeDilation } from "../physics/schwarzschild.js";
 export function initializeSimulation() {
     const distanceSlider = document.getElementById("distance-slider");
     const distanceValue = document.getElementById("distance-value");
+    const distancePresets = document.querySelectorAll(".distance-preset");
     const observer = document.getElementById("observer");
 
     const nearClock = document.getElementById("near-clock");
@@ -52,6 +53,11 @@ export function initializeSimulation() {
         const distance = Number(distanceSlider.value);
 
         distanceValue.textContent = distance.toFixed(2);
+
+        distancePresets.forEach(button => {
+            const isSelected = Math.abs(Number(button.dataset.distance) - distance) < 0.005;
+            button.setAttribute("aria-pressed", String(isSelected));
+        });
 
         const minDistance = Number(distanceSlider.min);
         const maxDistance = Number(distanceSlider.max);
@@ -134,6 +140,12 @@ export function initializeSimulation() {
     }
 
     distanceSlider.addEventListener("input", updateObserver);
+    distancePresets.forEach(button => {
+        button.addEventListener("click", () => {
+            distanceSlider.value = button.dataset.distance;
+            updateObserver();
+        });
+    });
     startButton.addEventListener("click", startSimulation);
     resetButton.addEventListener("click", resetSimulation);
 
