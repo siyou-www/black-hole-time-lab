@@ -68,8 +68,26 @@
                             <!-- Space Background -->
                             <rect width="600" height="400" fill="url(#space-glow)" />
 
+                            <!-- Decorative Star Field -->
+                            <g class="star-field" fill="#ffffff">
+                                <circle cx="45" cy="50" r="1.5" opacity="0.7" />
+                                <circle cx="120" cy="110" r="1" opacity="0.5" />
+                                <circle cx="310" cy="55" r="1.5" opacity="0.8" />
+                                <circle cx="470" cy="85" r="1" opacity="0.6" />
+                                <circle cx="550" cy="40" r="1.5" opacity="0.7" />
+                                <circle cx="80" cy="300" r="1" opacity="0.5" />
+                                <circle cx="380" cy="330" r="1.5" opacity="0.6" />
+                                <circle cx="520" cy="290" r="1" opacity="0.8" />
+                                <circle cx="330" cy="150" r="1" opacity="0.5" />
+                                <circle cx="570" cy="180" r="1.5" opacity="0.7" />
+                            </g>
+
                             <!-- Black Hole Glow -->
                             <circle cx="200" cy="200" r="125" fill="url(#event-glow)" />
+
+                            <!-- Decorative Accretion Glow -->
+                            <ellipse class="accretion-glow" cx="200" cy="200" rx="135" ry="38"
+                                fill="none" stroke="#f59e0b" stroke-width="8" opacity="0.55" />
 
                             <!-- Event Horizon -->
                             <circle cx="200" cy="200" r="75" fill="#000000" stroke="#fbbf24" stroke-width="2" />
@@ -80,6 +98,8 @@
 
                             <!-- Observer -->
                             <g id="observer" transform="translate(350,200)">
+                                <circle class="observer-pulse" r="20" fill="none"
+                                    stroke="#38bdf8" stroke-width="2" />
                                 <circle r="12" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
 
                                 <text x="0" y="-25" fill="#ffffff" text-anchor="middle" font-size="16">
