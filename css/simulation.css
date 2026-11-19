@@ -456,3 +456,35 @@
         grid-template-columns: 1fr;
     }
 }
+/* ===== Step 19: Visualization Upgrade ===== */
+
+.star-field circle {
+    animation: starTwinkle 4s ease-in-out infinite alternate;
+}
+.star-field circle:nth-child(3n) { animation-delay: 1.5s; }
+.star-field circle:nth-child(3n + 1) { animation-delay: 2.5s; }
+
+@keyframes starTwinkle {
+    from { opacity: 0.25; }
+    to { opacity: 0.85; }
+}
+
+.accretion-glow {
+    filter: drop-shadow(0 0 10px #f59e0b);
+}
+
+.observer-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: observerPulse 2.5s ease-out infinite;
+}
+
+@keyframes observerPulse {
+    0% { transform: scale(0.7); opacity: 0.8; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .star-field circle,
+    .observer-pulse { animation: none; }
+}
