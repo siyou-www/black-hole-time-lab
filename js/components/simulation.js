@@ -96,6 +96,8 @@ export function initializeSimulation() {
 
         dilationFactor.textContent = factor.toFixed(4);
         clockRate.textContent = `${percentage}%`;
+        const predictedFarTime = document.getElementById("predicted-far-time");
+        if (predictedFarTime) predictedFarTime.textContent = formatTime(Math.round(3600 / factor));
 
         dilationExplanation.textContent =
          `The near clock runs at ${percentage}% of the ` +
