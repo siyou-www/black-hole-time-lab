@@ -590,3 +590,41 @@
 @media (max-width: 768px) {
     .analog-clock-card svg { width: 80%; max-width: 176px; }
 }
+
+/* Refined cards: retain layout, soften contrast and reduce nested surfaces. */
+.black-hole-visual, .simulation-controls, .comparison-card, .mass-comparison,
+.physics-card, .physics-limitations, .guide-card, .reference-card {
+    background: #0e1626;
+    border-color: #202c40;
+    border-radius: 12px;
+    padding: 24px;
+}
+.black-hole-visual h3, .simulation-controls h3, .comparison-card h3,
+.mass-comparison h3, .physics-card h3, .physics-limitations h3,
+.guide-card h3, .reference-card h3 { font-size: 18px; margin-bottom: 12px; }
+.simulation-container { gap: 20px; }
+.simulation-controls p { background: transparent; padding: 0; margin: 12px 0; }
+.simulation-controls label { margin-top: 16px; margin-bottom: 8px; }
+.time-dilation-info { margin-top: 16px; }
+.time-dilation-info .time-stat { background: transparent; border: 0; padding: 8px 12px; }
+.stat-label { margin-bottom: 5px; }
+.time-prediction { margin-top: 16px; padding-top: 16px; }
+.time-prediction h3 { font-size: 16px; margin-bottom: 12px; }
+.prediction-grid > div:first-child { background: #1b1817; }
+.prediction-grid > div:last-child { background: #101c2b; }
+.mass-results > div, .physics-equation { background: #131e30; border-color: #202c40; }
+.guide-number { font-size: 26px; margin-bottom: 8px; }
+@media (max-width: 768px) {
+    .black-hole-visual, .simulation-controls, .comparison-card, .mass-comparison,
+    .physics-card, .physics-limitations, .guide-card, .reference-card { padding: 14px; }
+    .simulation-container, #comparison-container, .physics-grid, .guide-grid, .references-list { gap: 12px; }
+    .black-hole-visual h3, .simulation-controls h3, .comparison-card h3,
+    .mass-comparison h3, .physics-card h3, .physics-limitations h3,
+    .guide-card h3, .reference-card h3 { font-size: 16px; margin-bottom: 10px; }
+    .time-dilation-info .time-stat { padding: 6px 4px; }
+    .prediction-grid > div { padding: 8px; }
+    .mass-results { gap: 10px; margin-top: 18px; }
+    .mass-results > div { padding: 12px; }
+    .physics-equation { margin: 14px 0; padding: 12px 8px; }
+    .guide-card p, .reference-card p, .physics-card p { margin-bottom: 0; }
+}
