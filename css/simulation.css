@@ -568,3 +568,20 @@
 .simulation-container #start-button:hover { background: #0ea5e9; }
 .simulation-container .distance-preset[aria-pressed="true"] { background: #164e63; color: #f1f5f9; border-color: #38bdf8; }
 .simulation-container .stat-label, .prediction-grid span, .time-prediction small { color: #e2e8f0; }
+
+@media (max-width: 768px) {
+    .simulation-container { gap: 16px; margin-top: 20px; }
+    .black-hole-visual, .simulation-controls { padding: 16px; min-width: 0; }
+    #black-hole-display { min-height: 0; }
+    .dual-clocks { gap: 8px; }
+    .analog-clock-card { padding: 8px 0; font-size: 12px; }
+    #near-clock, #far-clock { font-size: clamp(16px, 4.5vw, 24px); }
+    .distance-presets { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; }
+    .distance-presets .distance-preset { min-height: 44px; padding: 6px 2px; font-size: 12px; }
+    #distance-slider, #mass-slider { min-height: 44px; margin-left: 0; }
+    .time-dilation-info { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+    .time-stat, .prediction-grid > div { padding: 10px; }
+    .prediction-grid { gap: 8px; }
+    .prediction-grid strong { font-size: clamp(16px, 4.5vw, 24px); overflow-wrap: anywhere; }
+    .mass-comparison, .physics-limitations, .guide-card, .reference-card, .comparison-card, .physics-card { padding: 18px; }
+}
