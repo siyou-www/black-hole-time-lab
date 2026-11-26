@@ -535,3 +535,12 @@
 #near-clock,#far-clock { color: inherit; font-size: clamp(16px,2.5vw,28px); }
 .simulation-scale { font-size: 13px; }
 @media (max-width: 768px) { .simulation-container { grid-template-columns: minmax(0,1fr); } }
+
+/* ===== Step 22: Time Difference Calculator ===== */
+.time-prediction { margin-top: 24px; padding: 20px; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-card); }
+.time-prediction h3 { font-size: 18px; margin: 0 0 16px; }
+.prediction-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.prediction-grid span { display: block; color: var(--text-secondary); font-size: 13px; }
+.prediction-grid strong { display: block; font-size: clamp(18px,3vw,32px); font-variant-numeric: tabular-nums; color: #fbbf24; }
+.prediction-grid > div:last-child strong { color: var(--accent); }
+.time-prediction small { display: block; margin-top: 12px; color: var(--text-secondary); }
