@@ -515,3 +515,23 @@
     background: rgba(56, 189, 248, 0.14);
     color: var(--accent);
 }
+
+/* ===== Step 21: Dual Analog Clocks ===== */
+.simulation-container { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+.shared-controls { grid-column: 1 / -1; }
+.dual-clocks { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; align-items: center; }
+.analog-clock-card { min-width: 0; text-align: center; padding: 12px 4px; color: #38bdf8; }
+.analog-clock-card.near { color: #fbbf24; }
+.analog-clock-card svg { width: 100%; max-width: 220px; display: block; margin: 12px auto; }
+.dial-face { fill: var(--bg-primary); stroke: var(--border-color); stroke-width: 2; }
+.dial-number { fill: var(--text-secondary); font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+.minor { stroke: #475569; stroke-width: 1; }
+.major { stroke: #94a3b8; stroke-width: 2; }
+.hour-hand,.minute-hand,.second-hand { stroke-linecap: round; }
+.hour-hand { stroke: #e2e8f0; stroke-width: 5; }
+.minute-hand { stroke: #cbd5e1; stroke-width: 3; }
+.second-hand { stroke: currentColor; stroke-width: 2; }
+.dial-hub { fill: currentColor; }
+#near-clock,#far-clock { color: inherit; font-size: clamp(16px,2.5vw,28px); }
+.simulation-scale { font-size: 13px; }
+@media (max-width: 768px) { .simulation-container { grid-template-columns: minmax(0,1fr); } }
