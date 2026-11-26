@@ -564,7 +564,7 @@
 .prediction-grid > div:last-child { background: #101f30; }
 .time-prediction { background: transparent; border: 0; border-top: 1px solid var(--border-color); border-radius: 0; padding: 20px 0 0; }
 .simulation-container button, .simulation-container button:hover { color: #f1f5f9; }
-.simulation-container #start-button { background: #036991; }
-.simulation-container #start-button:hover { background: #075985; }
+.simulation-container #start-button { background: #38bdf8; }
+.simulation-container #start-button:hover { background: #7dd3fc; }
 .simulation-container .distance-preset[aria-pressed="true"] { background: #164e63; color: #f1f5f9; border-color: #38bdf8; }
 .simulation-container .stat-label, .prediction-grid span, .time-prediction small { color: #e2e8f0; }
