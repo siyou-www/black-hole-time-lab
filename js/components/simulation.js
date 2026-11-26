@@ -44,9 +44,22 @@ export function initializeSimulation() {
             .join(":");
     }
 
+    const dialHands = Object.fromEntries(["near", "far"].map(id => [
+        id, ["hour", "minute", "second"].map(hand => document.getElementById(id + "-" + hand))
+    ]));
+
+    function updateDial(id, elapsed) {
+        const periods = [43200, 3600, 60];
+        dialHands[id].forEach((hand, i) => {
+            if (hand) hand.setAttribute("transform", "rotate(" + ((elapsed % periods[i]) / periods[i] * 360) + " 80 80)");
+        });
+    }
+
     function renderClocks() {
         nearClock.textContent = formatTime(nearElapsed);
         farClock.textContent = formatTime(farElapsed);
+        updateDial("near", nearElapsed);
+        updateDial("far", farElapsed);
     }
 
     function updateObserver() {
