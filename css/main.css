@@ -213,3 +213,14 @@ footer {
 #home .hero-secondary:hover { background: var(--bg-card); }
 .hero-topics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); text-align: center; gap: 12px; padding: 24px 0 0; color: var(--text-secondary); font-size: 14px; }
 @media (max-width: 768px) { .hero-stage { min-height: 480px; } .hero-art { opacity: .65; } .hero-topics { font-size: 12px; } }
+
+/* Align navigation targets with section headings, not empty padding. */
+main > section:not(#home) { border-bottom: 0; border-top: 1px solid var(--border-color); padding-top: 18px; padding-bottom: 90px; scroll-margin-top: 84px; }
+main > section:not(#home) > h2:first-child { margin-top: 0; }
+#home { border-bottom: 0; }
+@media (max-width: 768px) {
+    main > section:not(#home) { padding-top: 16px; padding-bottom: 60px; scroll-margin-top: 150px; }
+}
+@media (max-width: 360px) {
+    main > section:not(#home) { scroll-margin-top: 180px; }
+}
