@@ -215,11 +215,11 @@ footer {
 @media (max-width: 768px) { .hero-stage { min-height: 480px; } .hero-art { opacity: .65; } .hero-topics { font-size: 12px; } }
 
 /* Align navigation targets with section headings, not empty padding. */
-main > section:not(#home) { border-bottom: 0; border-top: 1px solid var(--border-color); padding-top: 18px; padding-bottom: 90px; scroll-margin-top: 84px; }
+main > section:not(#home) { border-bottom: 0; border-top: 1px solid var(--border-color); padding-top: 18px; padding-bottom: 160px; scroll-margin-top: 84px; }
 main > section:not(#home) > h2:first-child { margin-top: 0; }
 #home { border-bottom: 0; }
 @media (max-width: 768px) {
-    main > section:not(#home) { padding-top: 16px; padding-bottom: 60px; scroll-margin-top: 150px; }
+    main > section:not(#home) { padding-top: 16px; padding-bottom: 120px; scroll-margin-top: 150px; }
 }
 @media (max-width: 360px) {
     main > section:not(#home) { scroll-margin-top: 180px; }
