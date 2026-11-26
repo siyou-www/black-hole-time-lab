@@ -551,3 +551,20 @@
 .clock-actions #reset-button { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-color); }
 .clock-actions #reset-button:hover { border-color: var(--accent); }
 .clock-speed { text-align: center; color: var(--text-secondary); font-size: 12px; margin-top: 12px; }
+
+/* Balanced gold/blue visual polish; preserve original clock geometry. */
+.analog-clock-card.near .dial-face { stroke: #b38a43; }
+.analog-clock-card.far .dial-face { stroke: #387da5; }
+.time-dilation-info .time-stat:first-child { background: #101f30; }
+.time-dilation-info .time-stat:last-child { background: #211c17; }
+#dilation-factor { color: #7dd3fc; }
+#clock-rate { color: #fbbf24; }
+.prediction-grid > div { padding: 14px; border-radius: 9px; min-width: 0; }
+.prediction-grid > div:first-child { background: #211c17; }
+.prediction-grid > div:last-child { background: #101f30; }
+.time-prediction { background: transparent; border: 0; border-top: 1px solid var(--border-color); border-radius: 0; padding: 20px 0 0; }
+.simulation-container button, .simulation-container button:hover { color: #f1f5f9; }
+.simulation-container #start-button { background: #036991; }
+.simulation-container #start-button:hover { background: #075985; }
+.simulation-container .distance-preset[aria-pressed="true"] { background: #164e63; color: #f1f5f9; border-color: #38bdf8; }
+.simulation-container .stat-label, .prediction-grid span, .time-prediction small { color: #e2e8f0; }
