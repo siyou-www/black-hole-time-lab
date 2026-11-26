@@ -585,3 +585,8 @@
     .prediction-grid strong { font-size: clamp(16px, 4.5vw, 24px); overflow-wrap: anywhere; }
     .mass-comparison, .physics-limitations, .guide-card, .reference-card, .comparison-card, .physics-card { padding: 18px; }
 }
+
+/* Compact analog clock faces on mobile only. */
+@media (max-width: 768px) {
+    .analog-clock-card svg { width: 80%; max-width: 176px; }
+}
