@@ -224,3 +224,17 @@ main > section:not(#home) > h2:first-child { margin-top: 0; }
 @media (max-width: 360px) {
     main > section:not(#home) { scroll-margin-top: 180px; }
 }
+
+/* Mobile navigation and responsive spacing */
+.nav-toggle { display: none; }
+@media (max-width: 768px) {
+    nav { flex-direction: row; align-items: center; flex-wrap: wrap; padding: 10px 16px; gap: 8px; }
+    nav .nav-toggle:not([hidden]) { display: block; margin: 0; min-width: 44px; min-height: 44px; padding: 6px; background: var(--bg-card); color: #fff; font-size: 22px; border: 1px solid var(--border-color); }
+    nav #nav-links { width: 100%; gap: 0; flex-direction: column; }
+    nav .nav-toggle:not([hidden])[aria-expanded="false"] + #nav-links { display: none; }
+    nav #nav-links a { padding: 12px 4px; }
+    main { padding: 0 16px; }
+    main > section:not(#home), #home { scroll-margin-top: 76px; }
+    #home .hero-actions a { color: #fff; background: #0284c7; }
+    #home .hero-actions .hero-secondary { background: var(--bg-card); }
+}
